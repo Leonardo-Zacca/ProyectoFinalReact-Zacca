@@ -1,4 +1,5 @@
 import React from 'react'
+import CartWidget from './CartWidget'
 
 const NavBar = () => {
     return (
@@ -23,13 +24,16 @@ const NavBar = () => {
                                 <li><a className="dropdown-item" href="/#">Componentes</a></li>
                                 <li><hr className="dropdown-divider" /></li>
                                 <li><a className="dropdown-item" href="/#">Filamentos</a></li>
+                                
                             </ul>
                         </li>
+                        <CartWidget/>
                     </ul>
                     <form className="d-flex" role="search">
                         <input className="form-control me-2" type="search" placeholder="Busque su producto" aria-label="Buscar" />
                         <button className="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
+                    
                 </div>
             </div>
         </nav>
