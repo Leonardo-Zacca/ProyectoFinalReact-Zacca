@@ -27,7 +27,10 @@ const NavBar = () => {
                                 
                             </ul>
                         </li>
-                        <CartWidget/>
+                        <div >
+                            <CartWidget/>
+                            <span>10</span>
+                        </div>
                     </ul>
                     <form className="d-flex" role="search">
                         <input className="form-control me-2" type="search" placeholder="Busque su producto" aria-label="Buscar" />
