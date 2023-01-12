@@ -70,8 +70,8 @@ const ItemListContainer = ({greeting}) => {
   console.log(products)
 
   return (
-    <div>
-        <input onChange={handleChange} placeholder='Realice la búsqueda de productos'></input>
+    <div >
+        <input onChange={handleChange} placeholder='Buscar Productos'></input>
         <ItemList productos={products}/>
     </div>
   )
