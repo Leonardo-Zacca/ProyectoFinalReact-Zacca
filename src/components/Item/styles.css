@@ -1,0 +1,26 @@
+.card {
+    color: black;
+    text-align: center;
+}
+.card img {
+    width: auto; /* establece un ancho fijo de 200px para las imágenes */
+    height: 200px; /* establece un alto fijo de 150px para las imágenes */
+    object-fit: cover;
+ }
+.card-body {
+    background-color: #de3c4b;
+    border-radius: 15px;
+}
+.boton {
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 7px;
+    border: 2px solid;
+}
+.boton:hover {
+    background-color: rgb(80, 16, 16);
+    border: 2px solid black;
+    color: rgb(172, 165, 165);
+}
