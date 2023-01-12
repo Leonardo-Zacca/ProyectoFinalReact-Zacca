@@ -1,0 +1,144 @@
+[
+    {
+        "id": 1,
+        "title": "Impresora Creality 3D Ender 3",
+        "price": 65000,
+        "description": "No disponible por el momento",
+        "category": "impresoras",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_611506-MLA49842850686_052022-V.webp"
+    },
+    {
+        "id": 2,
+        "title": "Impresora Hellbot Magna Se",
+        "price": 79000,
+        "description": "No disponible por el momento",
+        "category": "impresoras",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_749001-MLA52141336514_102022-V.webp"
+    },
+    {
+        "id": 3,
+        "title": "Impresora Artillery Genius",
+        "price": 118000,
+        "description": "No disponible por el momento",
+        "category": "impresoras",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_614500-MLA42238163094_062020-V.webp"
+    },
+    {
+        "id": 4,
+        "title": "Impresora Artillery Hornet",
+        "price": 67500,
+        "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+        "category": "impresoras",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_817658-MLA51619022699_092022-V.webp"
+     
+    },
+    {
+        "id": 5,
+        "title": "Termistor 350 Grados",
+        "price": 950,
+        "description": "No disponible por el momento",
+        "category": "componentes",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_954794-MLA44796405521_022021-V.webp"
+       
+    },
+    {
+        "id": 6,
+        "title": "Tubo teflón Pfte Capricorn 4mmx1.9mm",
+        "price": 2300,
+        "description": "No disponible por el momento",
+        "category": "componentes",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_739463-MLA48744183268_012022-V.webp"
+     
+    },
+    {
+        "id": 7,
+        "title": "Brazo Extrusor Idler Arm",
+        "price": 2820,
+        "description": "No disponible por el momento",
+        "category": "componentes",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_797150-MLA44679147485_012021-V.webp"
+   
+    },
+    {
+        "id": 8,
+        "title": "Kit extrusor metálico Creality Ender 3",
+        "price": 3850,
+        "description": "No disponible por el momento",
+        "category": "componentes",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_739593-MLA45551292146_042021-V.webp"
+    
+    },
+    {
+        "id": 9,
+        "title": "Filamento 3D PLA Printalot 1.75mm 1Kg Blanco",
+        "price": 3285,
+        "description": "No disponible por el momento",
+        "category": "filamentos",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_842884-MLA48658563085_122021-V.webp"
+  
+    },
+    {
+        "id": 10,
+        "title": "Filamento Pla Impresora 3d",
+        "price": 2500,
+        "description": "No disponible por el momento",
+        "category": "filamentos",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_954549-MLA46371004734_062021-V.webp"
+    
+    },
+    {
+        "id": 11,
+        "title": "Filamento 3D PLA 1.75mm dorado",
+        "price": 7000,
+        "description": "No disponible por el momento",
+        "category": "filamentos",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_660335-MLA48658563472_122021-V.webp"
+   
+    },
+    {
+        "id": 12,
+        "title": "Filamento 3D PLA Grilon3 Rojo",
+        "price": 4245,
+        "description": "No disponible por el momento",
+        "category": "filamentos",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_837812-MLA48657674775_122021-V.webp"
+   
+    },
+    
+    {
+        "id": 13,
+        "title": "Marco para Prusa I3 Makerparts",
+        "price": 17585,
+        "description": "No disponible por el momento",
+        "category": "otros",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_835667-MLA40975687620_032020-V.webp"
+       
+    },
+    {
+        "id": 14,
+        "title": "Marco Para Prusa I3 De Metal Makerparts Blanco",
+        "price": 21222,
+        "description": "No disponible por el momento",
+        "category": "otros",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_641481-MLA48977831235_012022-V.webp"
+      
+    },
+    {
+        "id": 15,
+        "title": "Prusa Steel I3 Impresora 3d Marco Metal",
+        "price": 8000,
+        "description": "No disponible por el momento",
+        "category": "otros",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_396915-MLA25321736644_012017-V.webp"
+       
+    },
+    {
+        "id": 16,
+        "title": "Kit De Armado Impresora 3d Con Marco Y Cama 20x20",
+        "price": 18206,
+        "description": "No disponible por el momento",
+        "category": "otros",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_719880-MLA47621686969_092021-V.webp"
+       
+    }
+]

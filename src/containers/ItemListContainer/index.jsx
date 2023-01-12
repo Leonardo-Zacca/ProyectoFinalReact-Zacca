@@ -1,16 +1,78 @@
-import React from 'react'
-import Item from '../../components/NavBar/Card'
-import './styles.scss'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
+import ItemList from '../../components/ItemList';
+import productJson from '../../data/products.json';
 
+const ItemListContainer = ({greeting}) => {
 
-const ItemListContainer = () => {
+  const [products, setProducts] = useState([])
+
+  //Lo primero es capturar la categoría que quiero filtrar
+  const {categoryId}  = useParams()
+  console.log(categoryId)
+
+  //Este effect se ejecuta cuando se monta el componente
+  useEffect(()=> {
+
+    //Caso JSON propio
+    const getProducts = () => {
+
+      const obtenerProductos = new Promise((res, rej) => {
+        setTimeout(()=> {
+          res(productJson)
+        }, 3000)
+      })
+
+      obtenerProductos
+      .then( productos => {
+        if (categoryId) { 
+          const productosFiltradosPorCategoria = productos.filter(producto => producto.category === categoryId) 
+          console.log(productosFiltradosPorCategoria) 
+          setProducts(productosFiltradosPorCategoria) 
+        } else { 
+          setProducts(productos) 
+        }
+      })
+      .catch(error => console.log(error))
+    }
+
+    getProducts()
+
+    //Caso llamado a una API externa
+
+    /* fetch('https://fakestoreapi.com/products')
+      .then(response => {
+        console.log(response);
+        return response.json()
+      })
+      .then(products => {
+        //En base a la categoryId vamos a hacer el filtro de productos
+        if (categoryId) {
+          const productosFiltradosPorCategoria = products.filter(producto => producto.category === categoryId)
+          console.log(productosFiltradosPorCategoria)
+          setProducts(productosFiltradosPorCategoria)
+        } else {
+          setProducts(products)
+        }
+      })
+      .catch((err) => {
+        alert("Hubo un error")
+      }); */
+
+  }, [categoryId])
+
+  const handleChange = (event) => {
+    const value = event.target.value
+    const productsFiltradosPorInput = productJson.filter(product => product.title.toLowerCase().includes(value.toLowerCase()))
+    setProducts(productsFiltradosPorInput)
+  }
+
+  console.log(products)
+
   return (
-    <div className='item-list-container'>
-        <Item title={"gatito 1"} description={"Un gatito número 1"}/>
-        <Item title={"gatito 2"} description={"Un gatito número 2"}/>
-        <Item title={"gatito 3"} description={"Un gatito número 3"}/>
-        <Item title={"gatito 4"} description={"Un gatito número 4"}/>
-        <Item title={"gatito 5"} description={"Un gatito número 5"}/>
+    <div>
+        <input onChange={handleChange} placeholder='Realice la búsqueda de productos'></input>
+        <ItemList productos={products}/>
     </div>
   )
 }
