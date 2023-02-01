@@ -54,7 +54,12 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-        <ItemDetail detail={detail}/>
+        {
+          Object.keys(detail).length === 0
+          ? <h2>Cargando ...</h2>
+          : <ItemDetail detail={detail}/>
+        }
+        
     </div>
   )
 }
