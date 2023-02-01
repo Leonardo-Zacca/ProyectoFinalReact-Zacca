@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail';
 import productJson from '../../data/products.json';
+import "./styles.css";
 
 const ItemDetailContainer = () => {
 
@@ -53,10 +54,11 @@ const ItemDetailContainer = () => {
   }, [id])
 
   return (
+    //En return no se puede colocar if, solamente operadores ernarios por que el if no necesariamente me devuelve algo, los ternarios siempre me devuelven algo en base a una condición
     <div>
         {
           Object.keys(detail).length === 0
-          ? <h2>Cargando ...</h2>
+          ? <h2 className='carga'>Cargando producto...</h2>
           : <ItemDetail detail={detail}/>
         }
         
