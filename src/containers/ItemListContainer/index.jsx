@@ -18,6 +18,20 @@ const ItemListContainer = ({greeting}) => {
   //Se ejecuta este efecto cuando se monta componente
   useEffect(()=> {
 
+    //Para cerrar con escape el Ad
+
+    const handleEsc = (event) => {
+      console.log(event);  //evento que es nativo del navegador
+
+      if (event.keyCode === 27) {
+        console.log("se cierra");
+        setAdVisibility(false); 
+        window.removeEventListener("keydown", handleEsc);
+      }
+    }
+
+    window.addEventListener("keydown" , handleEsc);
+
     //Caso con archivo JSON propio
     const getProducts = () => {
 
@@ -52,7 +66,7 @@ const ItemListContainer = ({greeting}) => {
   const handleCloseAd = (event) => {
  
     setAdVisibility(false)
-    //activar o desactivar el anuncio depende del true/false
+    //activar o desactivar el anuncio depende del true/false 
   }
 
   console.log(products)
