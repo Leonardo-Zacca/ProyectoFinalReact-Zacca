@@ -8,7 +8,7 @@ const ItemDetail = ({ detail }) => {
     const [quantity, setQuantity] = useState(0)
 
     const onAdd = (cantidad) => {
-        console.log(`Se agregó una cantidad de productos: ${cantidad}`)
+        console.log(`Se agregaron ${cantidad} productos`)
         setQuantity(cantidad)
     }
 
@@ -19,9 +19,9 @@ const ItemDetail = ({ detail }) => {
             <aside className="detail-aside">
                 <h4>{detail.title}</h4>
                 {
-                    quantity === 0 ?
+                    quantity === 0 ?   //mientras la cantidad sea 0 se muetra el itemCount,de no ser 0 muestra el botón para ir al carrito
                     <ItemCount 
-                        stock={20} 
+                        stock={10}    //! Parámetro para setear el stock de cada producto 
                         initial={1} 
                         onAdd={onAdd}    
                     />

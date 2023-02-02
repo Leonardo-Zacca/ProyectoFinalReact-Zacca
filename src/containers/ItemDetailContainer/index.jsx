@@ -35,22 +35,6 @@ const ItemDetailContainer = () => {
 
     getProductDetail()
 
-    //Llamado a la API externa
-    
-    //Obtengo un DETERMINADO producto (el producto con id 10)
-    /* fetch(`https://fakestoreapi.com/products/${id}`)
-      .then(response => {
-        console.log(response);
-        return response.json()
-      })
-      .then(json => {
-        console.log(json)
-        setDetail(json)
-      })
-      .catch((err) => {
-        alert("Hubo un error")
-      }); */
-
   }, [id])
 
   return (
