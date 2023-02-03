@@ -45,4 +45,5 @@ const ShopProvider = ({children}) => {
   )
 }
 //Esto vendría a ser un carrito global, es consumido por varios componentes
+
 export default ShopProvider

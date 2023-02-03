@@ -7,15 +7,15 @@ const Cart = () => {
   const {products} = useContext(Shop);
 
   return (
-    <table class="table table-success table-striped">
+    <table className="table table-success table-striped">
       <thead>
         <tr>
-          <th scope="col">id</th> 
-          <th scope="col">Image</th>
-          <th scope="col">title</th>
-          <th scope="col">price</th>
-          <th scope="col">quantity</th>
-          <th scope="col">Remove</th>
+          <th scope="col">Código</th> 
+          <th scope="col">Imagen</th>
+          <th scope="col">Título</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Remover</th>
         </tr>
       </thead>
       <tbody>
@@ -27,4 +27,4 @@ const Cart = () => {
   )
 }
 
-export default Cart
+export default Cart  
