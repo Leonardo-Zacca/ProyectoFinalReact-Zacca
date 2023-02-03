@@ -22,6 +22,7 @@ export default function NavBar() {
             <li className="nav-item">
                 <Link to="/category/otros">Otros</Link>
             </li>
+
             <div className="widget-container">
                 <CartWidget/>
             </div>
