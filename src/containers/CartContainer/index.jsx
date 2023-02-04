@@ -7,29 +7,30 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/config"; 
 import { doc, updateDoc } from "firebase/firestore";
 import { Link } from 'react-router-dom'
+import FormComp from '../../components/Form'
 
 
 const Cart = () => {
 
   const {products, total, cleanCart} = useContext(Shop);
 
-  // const [formVis, setFormVis] = useState(false);
+  const [formVis, setFormVis] = useState(false);
 
   const [loader, setLoader] = useState(false);
 
   
 
-  const confirmPurchase = async () => {
-
+  const confirmPurchase = async (dataDelFormulario) => {
+    const {phone: telefono, nombre, email} = dataDelFormulario
     try {
       
       setLoader(true);
   
       const order = generateOrderObject ({
         //esto recibe un objeto con varias propiedades de un modal o un formulario de compra que el profe no hizo pero dejo harcodeado
-        nombre : "Leo", 
-        email : "leonardozacca@gmail.com", 
-        telefono : "2616558886", 
+        nombre,
+        email,
+        telefono,
         cart : products, 
         total : total() 
       })
@@ -61,6 +62,7 @@ const Cart = () => {
       console.log(error);
     } finally {
       setLoader(false);
+      setFormVis(false);
     }
 
 
@@ -95,7 +97,7 @@ const Cart = () => {
           loader ?
           <h2>Cargando...</h2>
           :
-          <button onClick={confirmPurchase} className="" >Confirmar Compra</button>
+          <button onClick={() => setFormVis(true)} className="" >Confirmar Compra</button>
         }
       </>
       :
@@ -109,18 +111,18 @@ const Cart = () => {
 
       {/*! formulario al confirmar compra */}
 
-      {/* { formVis ?
-        <form>
-          <input placeholder='Ingrese el nombre'/>
-        </form>
+      { formVis ?
+        <FormComp
+          confirmPurchase = {confirmPurchase}
+          setFormVis = {setFormVis}
+          formVis = {formVis}
+        />
         : null
 
-      } */}
+      }
 
     </>
   )
 }
-
-//!RECORDAR HACER EL FORM AL FINAL DE CONFIRMAR COMPRA PARA LLENAR CON LOS DATOS DEL CLIENTE, ES NECESARIO PARA LA ENTREGA FINAL
 
 export default Cart  
