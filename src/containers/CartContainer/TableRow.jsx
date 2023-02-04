@@ -1,14 +1,15 @@
 import React from 'react'
+import '../CartContainer/styles.css'
 
 const TableRow = ({product}) => {
   return (
     <tr>
         <th scope="row">{product.id}</th>
-        <td><img src={product.image} alt="table-row"></img></td>
+        <td><img className="cart-image" src={product.image} alt="table-row"></img></td>
         <td>{product.title}</td>
         <td>{product.price}</td>
         <td>{product.quantity}</td>
-        <td><button>Remove</button></td>
+        <td><button className="boton" >Borrar</button></td>
     </tr>
   )
 }

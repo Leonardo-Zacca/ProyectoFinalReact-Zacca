@@ -20,8 +20,9 @@ const ItemDetail = ({ detail }) => {
     return (
         <div className="detail-container">
             <img className="detail-img" src={detail.image} alt="detalle" />
+            <h8 className="detail-description">{detail.description}</h8>
             <aside className="detail-aside">
-                <h4>{detail.title}</h4>
+                <h4 className="detail-title">{detail.title}</h4>
                 {
                     quantity === 0 ?   //mientras la cantidad sea 0 se muetra el itemCount,de no ser 0 muestra el botón para ir al carrito
                     <ItemCount 

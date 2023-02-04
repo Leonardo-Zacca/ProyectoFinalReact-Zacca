@@ -1,13 +1,15 @@
 import React, { useContext } from 'react'
 import TableRow from './TableRow'
 import { Shop} from '../../context/ShopProvider'
+import '../CartContainer/styles.css'
+
 
 const Cart = () => {
 
   const {products} = useContext(Shop);
 
   return (
-    <table className="table table-success table-striped">
+    <table className="table table-danger table-success table-striped text-center">
       <thead>
         <tr>
           <th scope="col">Código</th> 
