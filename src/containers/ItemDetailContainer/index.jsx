@@ -1,39 +1,59 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail';
-import productJson from '../../data/products.json';
+//import productJson from '../../data/products.json';
 import "./styles.css";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from '../../firebase/config';
 
 const ItemDetailContainer = () => {
 
-  const [detail, setDetail] = useState({})
+  const [detail, setDetail] = useState({})  
 
   const {id} = useParams()
 
   //Este effect se ejecuta cuando se monta el componente
   useEffect(()=> {
 
-    //CASO JSON propio
-    const getProductDetail = () => {
+    const getProduct = async () => {
+      const docRef = doc(db, "products", id);
+      const docSnap = await getDoc(docRef);
 
-      const obtenerProducto = new Promise((res, rej) => {
-        setTimeout(()=> {
-          res(productJson)
-        }, 3000)
-      })
-
-      obtenerProducto
-      .then( productos => {
-        if (id) { 
-          const detalleProducto = productos.find(producto => producto.id.toString() === id) 
-          console.log(detalleProducto) 
-          setDetail(detalleProducto) 
+      if(docSnap.exists()) {
+        console.log("Document data: ", docSnap.data());
+        const productDetail = {
+          id: docSnap.id,
+          ...docSnap.data()
         }
-      })
-      .catch(error => console.log(error))
-    }
+        setDetail(productDetail);
+      } else { 
+        console.log("No such document!");
+      }
 
-    getProductDetail()
+    }
+    getProduct();
+
+    //!CASO JSON propio, considero apropiado dejarlo en caso de que no se pueda utilizar firebase
+    // const getProductDetail = () => {
+
+    //   const obtenerProducto = new Promise((res, rej) => {
+    //     setTimeout(()=> {
+    //       res(productJson)
+    //     }, 3000)
+    //   })
+
+    //   obtenerProducto
+    //   .then( productos => {
+    //     if (id) { 
+    //       const detalleProducto = productos.find(producto => producto.id.toString() === id) 
+    //       console.log(detalleProducto) 
+    //       setDetail(detalleProducto) 
+    //     }
+    //   })
+    //   .catch(error => console.log(error))
+    // }
+
+    // getProductDetail()
 
   }, [id])
 

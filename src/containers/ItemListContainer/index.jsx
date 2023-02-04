@@ -3,12 +3,13 @@ import { useParams } from 'react-router-dom';
 import Ad from '../../components/Ad';
 import ItemList from '../../components/ItemList';
 import productJson from '../../data/products.json';
+import { db } from '../../firebase/config';
 import './styles.css';
+import { collection, getDocs, query, where } from "firebase/firestore"; 
 
 const ItemListContainer = ({greeting}) => {
 
   const [products, setProducts] = useState([])
-
   const [adVisibility, setAdVisibility] =useState(true)
 
   //Lo primero es capturar la categoría que quiero filtrar
@@ -18,7 +19,35 @@ const ItemListContainer = ({greeting}) => {
   //Se ejecuta este efecto cuando se monta componente
   useEffect(()=> {
 
-    //Para cerrar con escape el Ad
+  //!Implementando FireBase
+
+    const getProducts = async () => {
+      let querySnapshot;
+      if (categoryId){
+      const q = query(collection(db, "products"), where("category", "==", categoryId)); 
+      querySnapshot =await getDocs(q);
+      } else {
+        querySnapshot = await getDocs(collection(db, "products"));
+      }
+      
+
+      const productosFirebase = [];
+      
+
+      querySnapshot.forEach((doc) => {
+        
+        const product = {
+          id : doc.id,
+          ...doc.data()
+        }
+        productosFirebase.push(product)
+      });
+      setProducts(productosFirebase)
+    }
+    getProducts();
+
+
+  //!Para cerrar con escape el Ad
 
     const handleEsc = (event) => {
       console.log(event);  //evento que es nativo del navegador
@@ -32,29 +61,29 @@ const ItemListContainer = ({greeting}) => {
 
     window.addEventListener("keydown" , handleEsc);
 
-    //Caso con archivo JSON propio
-    const getProducts = () => {
+  //!Caso con archivo JSON propio , REEMPLAZADO ACTUALMENTE CON FIREBASE, se deja en código ya que lo considero útil en caso de no tener acceso a firebase
 
-      const obtenerProductos = new Promise((res, rej) => {
-        setTimeout(()=> {
-          res(productJson)
-        }, 3000)
-      })
+    // const getProducts = () => {
 
-      obtenerProductos
-      .then( productos => {
-        if (categoryId) { 
-          const productosFiltradosPorCategoria = productos.filter(producto => producto.category === categoryId) 
-          console.log(productosFiltradosPorCategoria) 
-          setProducts(productosFiltradosPorCategoria) 
-        } else { 
-          setProducts(productos) 
-        }
-      })
-      .catch(error => console.log(error))
-    }
+    //   const obtenerProductos = new Promise((res, rej) => {
+    //     setTimeout(()=> {
+    //       res(productJson)
+    //     }, 3000)
+    //   })
 
-    getProducts()
+    //   obtenerProductos
+    //   .then( productos => {
+    //     if (categoryId) { 
+    //       const productosFiltradosPorCategoria = productos.filter(producto => producto.category === categoryId) 
+    //       console.log(productosFiltradosPorCategoria) 
+    //       setProducts(productosFiltradosPorCategoria) 
+    //     } else { 
+    //       setProducts(productos) 
+    //     }
+    //   })
+    //   .catch(error => console.log(error))
+    // }
+
   }, [categoryId])
 
   const handleChange = (event) => {
