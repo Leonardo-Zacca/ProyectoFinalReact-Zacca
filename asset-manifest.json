@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ProyectoFinalReact-Zacca/static/css/main.4fff886a.css",
+    "main.js": "/ProyectoFinalReact-Zacca/static/js/main.ef0d6515.js",
+    "static/js/787.9d52d78a.chunk.js": "/ProyectoFinalReact-Zacca/static/js/787.9d52d78a.chunk.js",
+    "index.html": "/ProyectoFinalReact-Zacca/index.html",
+    "main.4fff886a.css.map": "/ProyectoFinalReact-Zacca/static/css/main.4fff886a.css.map",
+    "main.ef0d6515.js.map": "/ProyectoFinalReact-Zacca/static/js/main.ef0d6515.js.map",
+    "787.9d52d78a.chunk.js.map": "/ProyectoFinalReact-Zacca/static/js/787.9d52d78a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4fff886a.css",
+    "static/js/main.ef0d6515.js"
+  ]
+}
