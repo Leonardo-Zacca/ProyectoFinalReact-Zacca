@@ -38,8 +38,26 @@ const ShopProvider = ({children}) => {
         return products.some(product => product.id === id)
     }
 
+    //* Esta función nos permite saber el total del costo del producto
+
+    const total = () => {
+        let total = 0;
+        for (const product of products) {
+            total += product.price * product.quantity
+        }
+        return total;
+    }
+    
+    //!!!!!!ACÁ DEBERÍA IR LA LÓGICA PARA ELIMINAR UN PRODUCTO
+
+    const cleanCart = () => {
+        setProducts([])
+    }
+
+
+
     return (
-        <Shop.Provider value = {{products , addProduct, countCart}}>  
+        <Shop.Provider value = {{products , addProduct, countCart, total, cleanCart}}>  
             {children}
         </Shop.Provider>
   )

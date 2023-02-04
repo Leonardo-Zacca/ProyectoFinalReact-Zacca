@@ -5,7 +5,7 @@ const TableRow = ({product}) => {
   return (
     <tr>
         <th scope="row">{product.id}</th>
-        <td><img className="cart-image" src={product.image} alt="table-row"></img></td>
+        <td><img className="cart-image" src={product.image} alt="table-row" /></td>
         <td>{product.title}</td>
         <td>{product.price}</td>
         <td>{product.quantity}</td>
