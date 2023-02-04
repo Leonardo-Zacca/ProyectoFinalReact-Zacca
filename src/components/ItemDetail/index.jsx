@@ -26,7 +26,7 @@ const ItemDetail = ({ detail }) => {
                 {
                     quantity === 0 ?   //mientras la cantidad sea 0 se muetra el itemCount,de no ser 0 muestra el botón para ir al carrito
                     <ItemCount 
-                        stock={10}    //! Parámetro para setear el stock de cada producto 
+                        stock={detail.stock}    //! Parámetro para setear el stock de cada producto 
                         initial={1} 
                         onAdd={onAdd}    
                     />
