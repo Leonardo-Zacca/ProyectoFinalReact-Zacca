@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+README: E-Commerce para Impresión 3D, FiLa3D
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Objetivo
 
-## Available Scripts
+El objetivo de este proyecto es crear un e-commerce para la venta de productos relacionados con la impresión 3D,
+tanto insumos como repuestos e impresoras propiamente dichas
 
-In the project directory, you can run:
+Librerías utilizadas
 
-### `npm start` (Remember to intall nodemodules)
+Las siguientes librerías fueron utilizadas en este proyecto:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-Firebase: se utilizó como base de datos y plataforma de autenticación.
+-Bootstrap: se utilizó para crear una apariencia atractiva y responsiva para la página web.
+-React: se utilizó como marco de trabajo para el desarrollo de aplicaciones web.
+-React-Bootstrap: se utilizó para utilizar componentes de Bootstrap en React.
+-React-DOM: se utilizó para renderizar componentes de React en el DOM.
+-React-Hook-Form: se utilizó para manejar formularios de manera fácil y eficiente.
+-React-Router-DOM: se utilizó para proporcionar un enrutamiento para la aplicación.
+-React-Scripts: se utilizó para proporcionar scripts predeterminados para el desarrollo y construcción de la aplicación.
+-Sass: se utilizó para escribir estilos CSS con una sintaxis más potente y avanzada.
+-Web-Vitals: se utilizó para medir y optimizar la experiencia del usuario en la página web.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Justificación
 
-### `npm test`
+-Firebase se utilizó para proporcionar una solución de base de datos y autenticación escalable y fácil de usar.
+-Bootstrap se utilizó para crear una apariencia atractiva y responsiva para la página web de manera eficiente.
+-React se utilizó como marco de trabajo debido a su popularidad y potencia en el desarrollo de aplicaciones web.
+-React-Bootstrap se utilizó para aprovechar la funcionalidad de Bootstrap en React.
+-React-DOM se utilizó para renderizar componentes de React en el DOM de manera eficiente.
+-React-Hook-Form se utilizó en este proyecto para simplificar la gestión de formularios en la aplicación de e-commerce para impresión 3D.
+-React-Router-DOM se utilizó para proporcionar un enrutamiento eficiente para la aplicación.
+-React-Scripts se utilizó para proporcionar scripts predeterminados para el desarrollo y construcción de la aplicación.
+-Sass se utilizó para escribir estilos CSS de manera más avanzada y organizada.
+-Web-Vitals se utilizó para medir y optimizar la experiencia del usuario en la página web y garantizar una experiencia rápida y fluida.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Cada una de estas librerías fueron seleccionadas por su capacidad para simplificar y mejorar el desarrollo y funcionamiento de la aplicación de e-commerce para impresión 3D.
