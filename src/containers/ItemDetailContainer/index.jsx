@@ -25,36 +25,14 @@ const ItemDetailContainer = () => {
         };
         setDetail(productDetail);
       } else {
-        console.log("No such document!");
+        console.log("No está el documento!");
       }
     };
     getProduct();
-
-    //!CASO JSON propio, considero apropiado dejarlo en caso de que no se pueda utilizar firebase
-    // const getProductDetail = () => {
-
-    //   const obtenerProducto = new Promise((res, rej) => {
-    //     setTimeout(()=> {
-    //       res(productJson)
-    //     }, 3000)
-    //   })
-
-    //   obtenerProducto
-    //   .then( productos => {
-    //     if (id) {
-    //       const detalleProducto = productos.find(producto => producto.id.toString() === id)
-    //       console.log(detalleProducto)
-    //       setDetail(detalleProducto)
-    //     }
-    //   })
-    //   .catch(error => console.log(error))
-    // }
-
-    // getProductDetail()
   }, [id]);
 
   return (
-    //En return no se puede colocar if, solamente operadores ernarios por que el if no necesariamente me devuelve algo, los ternarios siempre me devuelven algo en base a una condición
+    //En return no se puede colocar if, solamente operadores ternarios por que el if no necesariamente me devuelve algo, los ternarios siempre me devuelven algo en base a una condición
     <div>
       {Object.keys(detail).length === 0 ? (
         <h2 className="carga">Cargando producto...</h2>
