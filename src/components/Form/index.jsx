@@ -12,7 +12,7 @@ const FormComp = ({confirmPurchase, formVis, setFormVis}) => {
     
       const onSubmit = (dataDelFormulario) => {
         confirmPurchase(dataDelFormulario)
-      }; // your form submit function which will invoke after successful validation
+      }; 
 
       const handleClose = () => {
         setFormVis(false);
@@ -52,10 +52,10 @@ const FormComp = ({confirmPurchase, formVis, setFormVis}) => {
               </Modal.Body>
               <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
-                  Close
+                  Cerrar
                 </Button>
                 <Button variant="primary" type ="submit">
-                  Confirm purchase
+                  Confirmar compra
                 </Button>
               </Modal.Footer>
             </form>
