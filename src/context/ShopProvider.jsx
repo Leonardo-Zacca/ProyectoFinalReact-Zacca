@@ -26,6 +26,12 @@ const ShopProvider = ({children}) => {
 
     }
 
+    //*Lógica para eliminar productos del carrito
+    const removeProduct = (productId) => {
+        setProducts(products.filter((product) => product.id !== productId));
+      };
+    
+
     const countCart = () => {
         let cantidadTotal = 0;
         for (const product of products) {
@@ -47,17 +53,9 @@ const ShopProvider = ({children}) => {
         }
         return total;
     }
-    
-    //!!!!!!ACÁ DEBERÍA IR LA LÓGICA PARA ELIMINAR UN PRODUCTO
-
-    const cleanCart = () => {
-        setProducts([])
-    }
-
-
 
     return (
-        <Shop.Provider value = {{products , addProduct, countCart, total, cleanCart}}>  
+        <Shop.Provider value = {{products , addProduct, countCart, total, removeProduct}}>  
             {children}
         </Shop.Provider>
   )

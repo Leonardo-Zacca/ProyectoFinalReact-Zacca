@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Ad from "../../components/Ad";
 import ItemList from "../../components/ItemList";
-import productJson from "../../data/products.json";
+
 import { db } from "../../firebase/config";
 import "./styles.css";
 import { collection, getDocs, query, where } from "firebase/firestore";
@@ -59,13 +59,7 @@ const ItemListContainer = ({ greeting }) => {
     window.addEventListener("keydown", handleEsc);
   }, [categoryId]);
 
-  const handleChange = (event) => {
-    const value = event.target.value;
-    const productsFiltradosPorInput = productJson.filter((product) =>
-      product.title.toLowerCase().includes(value.toLowerCase())
-    );
-    setProducts(productsFiltradosPorInput);
-  };
+
 
   const handleCloseAd = (event) => {
     setAdVisibility(false);
@@ -76,7 +70,7 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <div>
-      <input onChange={handleChange} placeholder="Buscar Productos"></input>
+      
       <ItemList productos={products} />
       {adVisibility === true ? (
         <Ad className="ad">
