@@ -14,12 +14,7 @@ const TableRow = ({ product }) => {
       <td>{product.price}</td>
       <td>{product.quantity}</td>
       <td>
-        <button
-          className="boton"
-          onClick={() => removeProduct(product.id)}
-        >
-          Borrar
-        </button>
+        <button className="boton" onClick={() => removeProduct(product.id)}>Borrar</button>
       </td>
     </tr>
   );
