@@ -1,5 +1,5 @@
 .logo img {
-    width: 30%; /*establece un ancho del logo del 30% del ancho de la pantalla*/
+    width: 5rem; /*establece un ancho del logo del 30% del ancho de la pantalla*/
     height: auto; /*ajusta automáticamente el alto en relación al ancho*/
     display: flex;
  }
