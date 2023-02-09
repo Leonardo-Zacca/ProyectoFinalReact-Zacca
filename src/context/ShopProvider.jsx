@@ -29,6 +29,7 @@ const ShopProvider = ({children}) => {
     //*Lógica para eliminar productos del carrito
     const removeProduct = (productId) => {
         setProducts(products.filter((product) => product.id !== productId));
+        console.log("Se elimina producto del carrito");
       };
     
 
@@ -54,8 +55,12 @@ const ShopProvider = ({children}) => {
         return total;
     }
 
+    const cleanCart = () => {
+        setProducts([])
+    }
+
     return (
-        <Shop.Provider value = {{products , addProduct, countCart, total, removeProduct}}>  
+        <Shop.Provider value = {{products , addProduct, countCart, total, removeProduct, cleanCart}}>  
             {children}
         </Shop.Provider>
   )

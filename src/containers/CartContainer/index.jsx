@@ -18,6 +18,7 @@ const Cart = () => {
   const [loader, setLoader] = useState(false);
 
   const confirmPurchase = async (dataDelFormulario) => {
+    
     const { phone: telefono, nombre, email } = dataDelFormulario;
     try {
       setLoader(true);
@@ -47,6 +48,7 @@ const Cart = () => {
       }
 
       alert("ORDEN CONFIRMADA CON ID: " + docRef.id);
+
     } catch (error) {
       console.log(error);
     } finally {

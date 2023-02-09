@@ -17,6 +17,7 @@ const ItemListContainer = ({ greeting }) => {
 
   //Se ejecuta este efecto cuando se monta componente
   useEffect(() => {
+    
     //!Esta porción de código corresponde a la implementación de FireBase
 
     const getProducts = async () => {
